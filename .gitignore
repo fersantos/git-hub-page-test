@@ -1,0 +1,14 @@
+.DS_STORE
+.idea/
+.nyc_output/
+.vscode/
+coverage/
+db.json
+dist/
+node_modules/
+npm-debug.log
+response-data-mock.js
+yarn-error.log
+meta.json
+remote-profile/
+package-lock.json

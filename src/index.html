@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <title>Cobaia</title>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+    <!-- <link href="https://s3-sa-east-1.amazonaws.com/leroy-production/favicon.ico"
+      type="image/x-icon" rel="icon"> -->
+  </head>
+  <style>
+
+  </style>
+  <body>
+    <div id="loaderElement" class="loader">
+      <style>
+        .loader {background-size: 100px, 100px;background-repeat: no-repeat;background-position: center center;width: 100vw;height: 100vh;position: fixed;left: 0;top: 0;display: none;z-index: 99999999999;justify-content: center;align-items: center;background: white;animation-name: loaderbk;display: flex;justify-content: center;align-items: center;transition: 1s;}
+        .loader img{width: 100%;margin: auto;display: block;}
+        .loader-white, .loader-black{position:absolute;top: 50%;left: 50%;transform: translate(-50%,-50%);}
+        .loader-black{animation-name: loaderimg;}
+        .loaderbar {
+          position: relative;
+          margin-top: 15px;
+          height: 5px;
+          background: #e6e6e6;
+        }
+        .loaderbar:before {
+          content: '';
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 70%;
+          background: #72bf44;
+          height: 100%;
+          animation-name: loaderimg;
+          animation-duration: 1s;
+          animation-timing-function: ease-in-out;
+          animation-iteration-count: infinite;
+          margin-bottom: 15px;
+          transform: translate(-50%);
+          animation-direction: alternate;
+          left: 50%;
+        }
+        .loader[data-finished="true"]{animation-play-state: paused;opacity: 0}
+        .logo-loader{width:150px;position: relative;overflow: hidden;padding-bottom: 15px;}
+        @keyframes loaderimg{
+          0%{transform: translate(-160%);}
+          100%{transform: translate(60%);}
+        }
+      </style>
+      <div class="logo-loader">
+        <!-- <img src="\assets\images\wait.svg" class="gif-loader" alt=""> -->
+        <div class="loaderbar"></div>
+      </div>
+      <script>
+        window.addEventListener('load', function loadFunction() {
+          document.querySelector('#loaderElement').setAttribute('data-finished', true)
+          window.removeEventListener('load', loadFunction)
+          setTimeout(function () {
+            document.querySelector('#loaderElement').remove()
+          }, 1000)
+        })
+      </script>
+    </div>
+    <div id='root'></div>
+
+    <script>
+      window.recaptchaOptions = { lang: 'pt-BR' }
+    </script>
+  </body>
+</html>
