@@ -1,10 +1,14 @@
 {
+  "homepage": "https://fersantos.github.io/git-hub-page-test",
   "name": "cobaia",
   "description": "escrever aqui descrição",
   "license": "ISC",
   "sideEffects": false,
   "scripts": {
-    "dev": "webpack serve"
+    "build-storybook": "build-storybook",
+    "docdeploy": "gh-pages -d build-storybook",
+    "dev": "webpack serve",
+    "storybook": "start-storybook -p 6006"  
   },
   "dependencies": {
     "@nivo/bar": "0.67.0",
@@ -29,6 +33,10 @@
     "@babel/preset-env": "^7.12.11",
     "@babel/preset-react": "^7.12.10",
     "@babel/preset-typescript": "^7.12.7",
+    "@storybook/addon-actions": "^6.3.8",
+    "@storybook/addon-essentials": "^6.3.8",
+    "@storybook/addon-links": "^6.3.8",
+    "@storybook/react": "^6.3.8",
     "@types/node": "^14.14.25",
     "@types/react-router-dom": "^5.1.7",
     "@types/styled-components": "^5.1.7",
@@ -46,6 +54,7 @@
     "eslint-plugin-prettier": "^3.3.1",
     "eslint-plugin-react": "^7.22.0",
     "eslint-plugin-react-hooks": "^4.2.0",
+    "gh-pages": "^3.2.3",
     "html-webpack-plugin": "^4.5.1",
     "mini-css-extract-plugin": "^1.3.3",
     "prettier": "^2.2.1",

@@ -1,14 +1,16 @@
 .DS_STORE
 .idea/
 .nyc_output/
+.storybook/
 .vscode/
 coverage/
 db.json
 dist/
 node_modules/
 npm-debug.log
+package-lock.json
 response-data-mock.js
 yarn-error.log
 meta.json
 remote-profile/
-package-lock.json
+storybook-static/
