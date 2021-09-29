@@ -32,7 +32,7 @@ jobs:
         run: yarn build-storybook
 
       - name: Pushing build to reserved page branch
-        run: gh-pages -d storybook-static
+        run: yarn gh-pages -d storybook-static
 
       - name: Delete used build
         run: rm -R storybook-static
