@@ -6,7 +6,7 @@
   "sideEffects": false,
   "scripts": {
     "build-storybook": "build-storybook",
-    "docdeploy": "gh-pages -d build-storybook",
+    "docdeploy": "gh-pages -d storybook-static",
     "dev": "webpack serve",
     "storybook": "start-storybook -p 6006"  
   },
