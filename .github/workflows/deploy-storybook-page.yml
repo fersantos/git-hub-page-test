@@ -26,6 +26,9 @@ jobs:
       - uses: actions/checkout@v2
 
       - name: Build Storybook
+        run: yarn install
+
+      - name: Build Storybook
         run: yarn build-storybook
 
       - name: Pushing build to reserved page branch
@@ -33,3 +36,6 @@ jobs:
 
       - name: Delete used build
         run: rm -R storybook-static
+
+      - name: Delete install
+        run: rm -R node_modules
