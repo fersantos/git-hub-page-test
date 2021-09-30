@@ -24,8 +24,7 @@ jobs:
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
-      - run: git config user.name "$(git --no-pager log --format=format:'%an' -n 1)"
-      - run: git config user.email "$(git --no-pager log --format=format:'%ae' -n 1)"
+      - uses: fregante/setup-git-user@v1
 
       - name: Install dependencies
         run: yarn install
