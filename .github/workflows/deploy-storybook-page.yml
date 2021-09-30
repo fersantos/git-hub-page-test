@@ -23,8 +23,8 @@ jobs:
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-      # - uses: actions/checkout@v2
-      # - uses: fregante/setup-git-user@v1
+      - uses: actions/checkout@v2
+      - uses: fregante/setup-git-user@v1
 
       - name: Install dependencies
         run: yarn install
@@ -35,8 +35,8 @@ jobs:
       - name: Pushing build to reserved page branch
         run: yarn gh-pages -d storybook-static
 
-      - name: Delete used build
-        run: rm -R storybook-static
+      # - name: Delete used build
+      #   run: rm -R storybook-static
 
-      - name: Delete install
-        run: rm -R node_modules
+      # - name: Delete install
+      #   run: rm -R node_modules
